@@ -6,6 +6,7 @@ __all__ = ['Deck', 'draw_n']
 # %% ../nbs/01_deck.ipynb 2
 from .card import *
 from fastcore.utils import *
+import random
 
 # %% ../nbs/01_deck.ipynb 4
 class Deck:
@@ -34,7 +35,7 @@ def remove(self: Deck,
     "Removes `card` from the deck or raises exception if it is not there"
     self.cards.remove(card)
 
-# %% ../nbs/01_deck.ipynb 18
+# %% ../nbs/01_deck.ipynb 19
 def draw_n(n:int, # number of cards to draw
           replace:bool=True): # whether or not draw with replacement
     "Draw `n` cards with replacement iif `repace`"
